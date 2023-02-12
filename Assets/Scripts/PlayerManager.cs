@@ -28,7 +28,7 @@ public class PlayerManager : MonoBehaviour
         moveForce(Vector3.forward,vInput);
         if(Input.GetKeyDown(KeyCode.Space)){
             Instantiate(carrot,
-                        new Vector3(transform.position.x,carrot.transform.position.y,carrot.transform.position.z),
+                        new Vector3(transform.position.x,transform.position.y,transform.position.z),
                         carrot.transform.rotation);
         }
 
