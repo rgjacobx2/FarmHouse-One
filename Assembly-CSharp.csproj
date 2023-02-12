@@ -39,6 +39,8 @@
      <Compile Include="Assets/Scripts/Objectmovement.cs" />
      <Compile Include="Assets/Scripts/Projectile.cs" />
      <Compile Include="Assets/Scripts/PlayerManager.cs" />
+     <Compile Include="Assets/Scripts/SpawnManager.cs" />
+     <Compile Include="Assets/Scripts/CollisonManager.cs" />
      <None Include="Assets/Course Library/_Source_Files/_LICENSE.txt" />
     <Reference Include="UnityEngine">
         <HintPath>/home/arjeejacob/Unity/Hub/Editor/2021.3.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

@@ -341,9 +341,11 @@
 -r:"Library/Bee/artifacts/2400b0aE.dag/Unity.VisualStudio.Editor.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Scripts/CollisonManager.cs"
 "Assets/Scripts/Objectmovement.cs"
 "Assets/Scripts/PlayerManager.cs"
 "Assets/Scripts/Projectile.cs"
+"Assets/Scripts/SpawnManager.cs"
 -langversion:9.0
 
 /deterministic
