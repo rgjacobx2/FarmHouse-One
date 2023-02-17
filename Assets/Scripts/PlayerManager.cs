@@ -26,25 +26,26 @@ public class PlayerManager : MonoBehaviour
 
         moveForce(Vector3.right,hInput);
         moveForce(Vector3.forward,vInput);
-        if(Input.GetKeyDown(KeyCode.Space)){
-            Instantiate(carrot,
-                        new Vector3(transform.position.x,transform.position.y,transform.position.z),
-                        carrot.transform.rotation);
-        }
 
-        if(transform.position.x >= rightBorder){
+
+        if(transform.position.x > rightBorder){
             transform.position = new Vector3(rightBorder,transform.position.y,transform.position.z);
         }
-        if(transform.position.x <= leftBorder){
+        if(transform.position.x < leftBorder){
             transform.position = new Vector3(leftBorder,transform.position.y,transform.position.z);
         }
-        if(transform.position.z >= topBorder){
+        if(transform.position.z > topBorder){
             transform.position = new Vector3(transform.position.x,transform.position.y,topBorder);
         }
-        if(transform.position.z <= bottomBorder){
+        if(transform.position.z < bottomBorder){
             transform.position = new Vector3(transform.position.x,transform.position.y,bottomBorder);
         }
 
+        if(Input.GetKeyDown(KeyCode.Space)){
+            Instantiate(carrot,
+                        new Vector3(transform.position.x,transform.position.y,transform.position.z+1.5f),
+                        carrot.transform.rotation);
+        }
     }
 
 

@@ -5,7 +5,6 @@ using UnityEngine;
 public class CollisonManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject carrot,moose,dog,chick,player;
     
     void Start()
     {
@@ -16,5 +15,11 @@ public class CollisonManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter(Collider otherGameObject){
+
+        Destroy(gameObject);
+        Destroy(otherGameObject);
     }
 }
