@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Objectmovement : MonoBehaviour
 {
-    private float speed = 25.0f;
+    private float speed = 25.0f;   
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +17,9 @@ public class Objectmovement : MonoBehaviour
         if(gameObject.tag == "Chick"){
             speed = 5.0f;
         }if(gameObject.tag == "Dog"){
-            speed = 10.0f;
+            speed = 8.0f;
         }if(gameObject.tag == "Moose"){
-            speed = 15.0f;
+            speed = 10.0f;
         }
 
 
