@@ -26,7 +26,7 @@ public class Objectmovement : MonoBehaviour
         transform.Translate(Vector3.forward*speed*Time.deltaTime);
 
 
-        if(transform.position.z <= -30.0f){
+        if(transform.position.z <= -30.0f || transform.position.x>= 45 || transform.position.x <= -45){
             Debug.Log("They are attacking the Farmhouse! Stop Them!");
             Destroy(gameObject);
         }
