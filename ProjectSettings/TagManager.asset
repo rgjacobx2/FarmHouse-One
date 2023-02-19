@@ -7,6 +7,7 @@ TagManager:
   - Chick
   - Dog
   - Moose
+  - Projectile
   layers:
   - Default
   - TransparentFX

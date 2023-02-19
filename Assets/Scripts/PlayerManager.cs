@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     public GameObject carrot;
+    private int currentHealth = 100;
+    public HealthBarScript healthbarObject;
     private float hInput,vInput;
     private float playerSpeed = 24.0f;
     private float rightBorder = 23.0f;
@@ -15,7 +17,7 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-                
+        healthbarObject.SetHealth(currentHealth);
     }
 
     // Update is called once per frame
@@ -46,8 +48,19 @@ public class PlayerManager : MonoBehaviour
                         new Vector3(transform.position.x,transform.position.y,transform.position.z+1.5f),
                         carrot.transform.rotation);
         }
+
+
     }
 
+public void TakeDamage(int damage){
+    if(currentHealth - damage >= 0){
+        currentHealth -= damage;
+        healthbarObject.SetHealth(currentHealth);
+    }
+    else{
+        Destroy(gameObject);
+    }
+}
 
 void moveForce(Vector3 direction, float moveInput){
     transform.Translate(direction*moveInput*Time.deltaTime*playerSpeed);

@@ -4,22 +4,27 @@ using UnityEngine;
 
 public class CollisonManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public HealthBarScript healthBarObject; 
+    public PlayerManager player;   
+
+    private void OnTriggerEnter(Collider other){
+
+        
+        if(gameObject.CompareTag("Player")){
+
+            Destroy(other.gameObject);
+            player.TakeDamage(10);
+            
+        }
+        if(gameObject.CompareTag("Projectile")){
+
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+        }
+
+
+    }
+
     
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnTriggerEnter(Collider otherGameObject){
-
-        Destroy(gameObject);
-        Destroy(otherGameObject);
-    }
 }
