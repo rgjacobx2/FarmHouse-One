@@ -8,6 +8,7 @@ TagManager:
   - Dog
   - Moose
   - Projectile
+  - GameOver
   layers:
   - Default
   - TransparentFX

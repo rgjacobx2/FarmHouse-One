@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    public GameObject carrot;
+    public GameObject carrot,gameOver;
     private int currentHealth = 100;
     public HealthBarScript healthbarObject;
     private float hInput,vInput;
@@ -17,7 +17,6 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ScoreCard.scoreManager.AddScore(0);
         healthbarObject.SetHealth(currentHealth);
     }
 
@@ -60,6 +59,7 @@ public void TakeDamage(int damage){
     }
     else{
         Destroy(gameObject);
+        gameOver.SetActive(true);
     }
 }
 

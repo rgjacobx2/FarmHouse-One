@@ -16,6 +16,7 @@ public class CollisonManager : MonoBehaviour
             Destroy(other.gameObject);
             player.TakeDamage(10);
             
+            
         }
         if(gameObject.CompareTag("Projectile")){
 
