@@ -19,6 +19,7 @@ public class CollisonManager : MonoBehaviour
         }
         if(gameObject.CompareTag("Projectile")){
 
+            ScoreCard.scoreManager.AddScore(10);
             Destroy(gameObject);
             Destroy(other.gameObject);
         }
