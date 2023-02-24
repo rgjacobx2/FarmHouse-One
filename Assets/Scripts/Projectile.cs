@@ -8,7 +8,6 @@ public class Projectile : MonoBehaviour
     private int speed=50;
     void Start()
     {
-        
     }
 
     // Update is called once per frame
